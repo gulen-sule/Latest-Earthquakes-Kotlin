@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="depremData"
+            type="com.example.latestearthquakes.data.model.Depremler" />
+    </data>
+
+
+    <LinearLayout
+
+        android:id="@+id/itemLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:focusable="auto"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/design_default_color_primary_dark"
+        android:padding="5dp"
+        android:rotationX="-3">
+
+        <TextView
+            android:id="@+id/depremBuyukluk"
+            android:layout_width="98dp"
+            android:layout_height="93dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/big_earthquake_drawable"
+            android:gravity="center"
+            android:text="@{depremData.buyukluk.ml}"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/itemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/depremYer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_item_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@{depremData.yer}"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="İstanbul Buyukcekmece" />
+
+            <TextView
+                android:id="@+id/depremTarih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="2"
+                android:background="@drawable/drawable_light"
+                android:gravity="center"
+                android:inputType="date"
+                android:text="@{depremData.tarih}"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/depremSaat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="2"
+                android:background="@drawable/drawable_light"
+                android:gravity="center"
+                android:inputType="time"
+                android:text="@{depremData.saat}"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

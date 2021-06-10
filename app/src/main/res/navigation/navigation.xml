@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/earthquakesFragment">
+    <fragment
+        android:id="@+id/earthquakesFragment"
+        android:name="com.example.latestearthquakes.main.earthquakes.EarthquakesFragment"
+        android:label="EarthquakesFragment"
+        tools:layout="@layout/fragment_earthquakes">
+        <action
+            android:id="@+id/action_earthquakesFragment_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.latestearthquakes.main.earthquakes.EarthquakesDetailedFragment"
+        tools:layout="@layout/fragment_detayli">
+        <argument
+            android:name="deprem_data"
+            app:argType="com.example.latestearthquakes.data.model.Depremler" />
+        <action
+            android:id="@+id/action_fragmentDetails_to_earthquakesFragment"
+            app:destination="@id/earthquakesFragment" />
+    </fragment>
+
+
+</navigation>
