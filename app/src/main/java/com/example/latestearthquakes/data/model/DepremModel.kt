@@ -11,5 +11,5 @@ data class DepremModel(
     @SerializedName("github_link")
     val github_link: String?,
     @SerializedName("depremler")
-    val depremler: List<Depremler>? = null
+    var depremler: List<Depremler>? = null
 ) : Serializable
