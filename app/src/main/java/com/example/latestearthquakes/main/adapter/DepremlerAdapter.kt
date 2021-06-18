@@ -30,7 +30,6 @@ class DepremlerAdapter(private var depremlerList: DepremModel, val Onclick: (Dep
             Onclick(deprem)
         }
     }
-
     override fun getItemCount(): Int {
         return depremlerList.depremler!!.size
     }

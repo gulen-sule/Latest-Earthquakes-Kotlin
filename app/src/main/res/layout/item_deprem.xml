@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="depremData"
             type="com.example.latestearthquakes.data.model.Depremler" />
     </data>
-
 
     <LinearLayout
 
